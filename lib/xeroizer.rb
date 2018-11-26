@@ -79,9 +79,13 @@ require 'xeroizer/models/payroll/employee'
 require 'xeroizer/report/factory'
 
 require 'xeroizer/response'
+require 'xeroizer/xero_config'
 
 require 'xeroizer/generic_application'
 require 'xeroizer/public_application'
 require 'xeroizer/private_application'
 require 'xeroizer/partner_application'
 require 'xeroizer/payroll_application'
+
+# Mock modules and files
+require 'xeroizer/mock'

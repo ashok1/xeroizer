@@ -16,14 +16,9 @@ module Xeroizer
       # @param [Hash] options other options to pass to the GenericApplication constructor
       # @return [PartnerApplication] instance of PrivateApplication
       def initialize(consumer_key, consumer_secret, path_to_private_key, options = {})
-        default_options = {
-          :xero_url         => 'https://api.xero.com/api.xro/2.0',
-          :site             => 'https://api.xero.com',
-          :authorize_url    => 'https://api.xero.com/oauth/Authorize',
-          :signature_method => 'RSA-SHA1'
-        }
+        default_options = Xeroizer.api_config
         options = default_options.merge(options).merge(
-          :private_key_file => path_to_private_key
+          :private_key_file => path_to_private_key 
         )
         super(consumer_key, consumer_secret, options)
 
